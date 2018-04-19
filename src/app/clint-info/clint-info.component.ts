@@ -32,14 +32,9 @@ export class ClintInfoComponent implements OnInit {
 
   AllClients = all_clients;
 
-  constructor(private _productService: ProductService) { }
+  constructor() { }
 
-  ngOnInit() {
-    this.getProducts();
+  ngOnInit() {  
   }
-
-  getProducts() {  
-   // debugger 
-    this.result = this._productService.getproducts();  
-    }  
+  
 }

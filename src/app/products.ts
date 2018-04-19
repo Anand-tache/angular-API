@@ -19,9 +19,14 @@ export class ProductService {
 //       .do(data => console.log(JSON.stringify(data)));
 //    }
 
-    getproducts(): Observable<client[]> {
-        return this._http.get(this._producturl)
-        .map((response: Response) => <client[]> response.json());
-    }
+getproducts(): Observable<client[]> {
+    return this._http.get(this._producturl)
+    .map((response: Response) => <client[]> response.json())
+    .do(data => console.log(JSON.stringify(data)));
+
+    // getproducts(): Observable<client[]> {
+    //     return this._http.get(this._producturl)
+    //     .map((response: Response) => <client[]> response.json());
+    // }
 
 }
